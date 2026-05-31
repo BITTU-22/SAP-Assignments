@@ -1,5 +1,5 @@
-//GET http://localhost:4004/odata/v4/hospital/Doctors?$filter=specialization eq 'Cardiology'
-//GET http://localhost:4004/odata/v4/hospital/Appointments?$filter=appointmentDate eq '2026-06-01'
+GET http://localhost:4004/odata/v4/hospital/Doctors?$filter=specialization eq 'Cardiology'
+GET http://localhost:4004/odata/v4/hospital/Appointments?$filter=appointmentDate eq '2026-06-01'
 
 # POST http://localhost:4004/odata/v4/hospital/Patients
 # Content-Type: application/json
