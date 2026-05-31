@@ -1,0 +1,4 @@
+ID;eventId;attendeeEmail;overallRating;contentRating;venueRating;speakerRating;comment;submittedAt
+f1111111-1111-1111-1111-111111111111;b1111111-1111-1111-1111-111111111111;amit.p@tata.com;5;5;4;5;Great sessions and well organized.;2026-06-13T10:00:00Z
+f2222222-2222-2222-2222-222222222222;b1111111-1111-1111-1111-111111111111;pooja.j@reliance.com;4;4;5;4;Good food but AC was too cold.;2026-06-14T09:30:00Z
+f3333333-3333-3333-3333-333333333333;b2222222-2222-2222-2222-222222222222;kiran.k@zomato.com;5;5;5;5;Excellent hands-on lab.;2026-07-16T11:15:00Z

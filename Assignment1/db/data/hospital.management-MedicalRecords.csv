@@ -1,0 +1,6 @@
+ID,patient_ID,doctor_ID,diagnosis,prescription,testRecommended,recordDate
+m101m101-e1e2-0000-0000-000000000001,p303p303-e1e2-0000-0000-000000000001,d202d202-e1e2-0000-0000-000000000001,Chronic Hypertension,Prescribed Lisinopril 10mg daily and suggested low-sodium diet.,Blood Pressure Monitoring,2026-01-20
+m101m101-e1e2-0000-0000-000000000002,p303p303-e1e2-0000-0000-000000000002,d202d202-e1e2-0000-0000-000000000002,Acute Appendicitis,Emergency appendectomy performed successfully. Post-op antibiotics prescribed.,Complete Blood Count,2026-02-15
+m101m101-e1e2-0000-0000-000000000003,p303p303-e1e2-0000-0000-000000000003,d202d202-e1e2-0000-0000-000000000001,Type 2 Diabetes,Metformin 500mg twice daily and referred to nutritionist.,HbA1c Test,2026-03-10
+m101m101-e1e2-0000-0000-000000000004,p303p303-e1e2-0000-0000-000000000004,d202d202-e1e2-0000-0000-000000000003,Acute Bronchitis,Amoxicillin 500mg for 7 days and rest with hydration.,Chest X-Ray,2026-04-25
+m101m101-e1e2-0000-0000-000000000005,p303p303-e1e2-0000-0000-000000000005,d202d202-e1e2-0000-0000-000000000002,Osteoarthritis,Prescribed Ibuprofen 400mg as needed and recommended physical therapy.,Knee X-Ray,2026-05-18
