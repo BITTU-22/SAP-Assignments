@@ -1,29 +1,32 @@
-//GET http://localhost:4004/odata/v4/logistics/Vehicles?$filter=status eq 'Available'
+'''test.http'''
 
-//GET http://localhost:4004/odata/v4/logistics/Shipments?$filter=status eq 'InTransit'
+GET http://localhost:4004/odata/v4/logistics/Vehicles?$filter=status eq 'Available'
 
-//GET http://localhost:4004/odata/v4/logistics/Shipments?$filter=customer_ID eq 30303030-3030-3030-3030-303030303031
+GET http://localhost:4004/odata/v4/logistics/Shipments?$filter=status eq 'InTransit'
 
-# POST http://localhost:4004/odata/v4/logistics/Shipments
-# Content-Type: application/json
+GET http://localhost:4004/odata/v4/logistics/Shipments?$filter=customer_ID eq 30303030-3030-3030-3030-303030303031
 
-# {
-#   "trackingNumber": "SL-2026-00004",
-#   "pickupAddress": "Tech Park Phase 1",
-#   "deliveryAddress": "Industrial Estate Sector 5",
-#   "pickupCity": "Hyderabad",
-#   "deliveryCity": "Chennai",
-#   "weight": 250.00
-# }
+ POST http://localhost:4004/odata/v4/logistics/Shipments
+ Content-Type: application/json
 
-# PATCH http://localhost:4004/odata/v4/logistics/Shipments/40404040-4040-4040-4040-404040404041
-# Content-Type: application/json
+ {
+   "trackingNumber": "SL-2026-00004",
+   "pickupAddress": "Tech Park Phase 1",
+   "deliveryAddress": "Industrial Estate Sector 5",
+   "pickupCity": "Hyderabad",
+   "deliveryCity": "Chennai",
+   "weight": 250.00
+ }
 
-# {
-#   "status": "Delivered",
-#   "deliveredAt": "2026-05-31T10:00:00Z",
-#   "paymentStatus": "Paid"
-# }
+ PATCH http://localhost:4004/odata/v4/logistics/Shipments/40404040-4040-4040-4040-404040404041
+ Content-Type: application/json
 
-//GET http://localhost:4004/odata/v4/logistics/Routes?$filter=fromCity eq 'Hyderabad' and toCity eq 'Bangalore'
-//GET http://localhost:4004/odata/v4/logistics/Drivers?$orderby=rating desc
+ {
+   "status": "Delivered",
+   "deliveredAt": "2026-05-31T10:00:00Z",
+   "paymentStatus": "Paid"
+ }
+
+GET http://localhost:4004/odata/v4/logistics/Routes?$filter=fromCity eq 'Hyderabad' and toCity eq 'Bangalore'
+
+GET http://localhost:4004/odata/v4/logistics/Drivers?$orderby=rating desc
