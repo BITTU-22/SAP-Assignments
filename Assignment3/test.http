@@ -1,5 +1,3 @@
-'''test.http'''
-
 GET http://localhost:4004/odata/v4/logistics/Vehicles?$filter=status eq 'Available'
 
 GET http://localhost:4004/odata/v4/logistics/Shipments?$filter=status eq 'InTransit'
