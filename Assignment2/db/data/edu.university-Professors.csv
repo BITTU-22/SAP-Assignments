@@ -1,0 +1,6 @@
+ID,firstName,lastName,email,phone,departmentCode,designation,joinDate,salary,officeRoom
+c1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Amit,Sharma,amit.sharma@techuni.edu,9876543210,CS,Distinguished,2010-06-15,150000.00,R-301
+d2b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Priya,Nair,priya.nair@techuni.edu,9876543211,EC,Full,2012-07-20,130000.00,J-104
+e3b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Rajesh,Patel,rajesh.patel@techuni.edu,9876543212,ME,Associate,2011-03-10,110000.00,V-202
+f4b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Anjali,Deshmukh,anjali.d@techuni.edu,9876543213,CS,Assistant,2018-01-05,90000.00,R-205
+a5b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Vikram,Singh,vikram.s@techuni.edu,9876543214,EC,Assistant,2020-08-25,85000.00,J-208

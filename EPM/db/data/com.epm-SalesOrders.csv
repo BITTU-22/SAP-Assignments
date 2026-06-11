@@ -1,0 +1,5 @@
+ID,orderNumber,customer_ID,orderDate,netAmount,currency_code,status
+so501,SO-001,cust401,2026-05-10,2425.00,USD,C
+so502,SO-002,cust402,2026-05-12,999.00,USD,P
+so503,SO-003,cust403,2026-05-14,14.20,EUR,N
+so504,SO-004,cust404,2026-05-15,450.00,USD,N

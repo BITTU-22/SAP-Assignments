@@ -1,0 +1,29 @@
+@base = http://localhost:4004/purchasing
+
+# POST {{base}}/PurchaseOrders
+# Content-Type: application/json
+
+# {
+#   "poNumber": "PO-2026-001",
+#   "supplier_ID": "s102",
+#   "orderDate": "2026-06-02",
+#   "status": "Draft",
+#   "currency_code": "USD"
+# }
+
+# POST {{base}}/PurchaseOrderItems
+# Content-Type: application/json
+
+# {
+#   "ID": "soi602",
+#   "product_ID": "p303",
+#   "quantity": 100,
+#   "unitPrice": 45.00
+# }
+
+//GET {{base}}/PurchaseOrders(d7595a84-4b3c-49a8-a25f-00ebcb77760f)/PurchasingService.getSummary()
+
+POST {{base}}/PurchaseOrders(d7595a84-4b3c-49a8-a25f-00ebcb77760f)/PurchasingService.submit
+Content-Type: application/json
+
+{}

@@ -1,0 +1,43 @@
+GET http://localhost:4004/odata/v4/hospital/Doctors?$filter=specialization eq 'Cardiology'
+GET http://localhost:4004/odata/v4/hospital/Appointments?$filter=appointmentDate eq '2026-06-01'
+
+POST http://localhost:4004/odata/v4/hospital/Patients
+Content-Type: application/json
+
+ {
+     "ID": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+     "firstName": "Alice",
+     "lastName": "Wonderland",
+     "dateOfBirth": "1995-08-15",
+     "gender": "Female",
+     "bloodGroup": "O+",
+     "phone": "+1122334455",
+     "email": "alice.w@example.com",
+     "address": "456 Rabbit Hole Ln",
+     "emergencyContact": "+5544332211",
+     "registrationDate": "2026-05-30"
+ }
+
+
+ POST http://localhost:4004/odata/v4/hospital/Appointments
+ Content-Type: application/json
+
+ {
+     "ID": "550e8400-e29b-41d4-a716-446655440000",
+     "patient_ID": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+     "doctor_ID": "e1000000-0000-0000-0000-000000000001",
+     "appointmentDate": "2026-06-01",
+     "appointmentTime": "10:30:00",
+     "reason": "Routine Heart Checkup",
+     "notes": "Patient requested morning slot.",
+     "fee": 100.00
+ }
+
+GET http://localhost:4004/odata/v4/hospital/Patients?$filter=bloodGroup eq 'O%2B'
+
+ PATCH http://localhost:4004/odata/v4/hospital/Appointments/550e8400-e29b-41d4-a716-446655440000
+ Content-Type: application/json
+
+ {
+     "status": "Completed"
+ }

@@ -1,0 +1,5 @@
+ID,name,floor,head,capacity,phone,isActive
+c101c101-e1e2-0000-0000-000000000001,Cardiology,3,Dr. Arvind Sharma,30,9876543210,true
+c101c101-e1e2-0000-0000-000000000002,Neurology,4,Dr. Rajesh Iyer,20,9812345678,true
+c101c101-e1e2-0000-0000-000000000003,Pediatrics,2,Dr. Meera Nair,40,9701234567,true
+c101c101-e1e2-0000-0000-000000000004,Orthopedics,1,Dr. Sanjay Patel,25,9654321098,true
