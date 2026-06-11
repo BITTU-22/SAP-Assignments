@@ -18,7 +18,7 @@ type AppointmentStatus : String enum { Scheduled; Completed; Cancelled; NoShow; 
 entity Departments : cuid {
     name       : String(100);
     floor      : Integer;
-    head       : Name; // Doctor name
+    head       : Name; 
     capacity   : Integer;
     phone      : Phone;
     isActive   : Boolean default true;
@@ -35,7 +35,7 @@ entity Doctors : cuid {
     department     : Association to Departments;
     phone          : Phone;
     email          : Email;
-    availableDays  : String(50); // e.g., "Mon,Tue,Wed"
+    availableDays  : String(50); 
     isActive       : Boolean default true;
 }
 
