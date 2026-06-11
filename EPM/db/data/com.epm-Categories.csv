@@ -1,0 +1,6 @@
+ID,name,description,parentCategory_ID
+c201,Electronics,Gadgets and components,
+c202,Smartphones,Mobile cell phones,c201
+c203,Laptops,Portable computers,c201
+c204,Food & Beverage,Edibles and drinks,
+c205,Beverages,Soft drinks and juices,c204

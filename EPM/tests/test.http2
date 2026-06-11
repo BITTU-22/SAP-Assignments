@@ -1,0 +1,73 @@
+
+@base = http://localhost:4004/orders
+
+###setup data
+
+# POST {{base}}/Customers
+# Content-Type: application/json
+
+# {
+#   "name": "Test Customer",
+#   "email": "test@example.com",
+#   "city": "Mumbai",
+#   "creditLimit": 500000
+# }
+
+# POST {{base}}/Orders
+# Content-Type: application/json
+
+# {
+#   "orderNumber": "SO-TEST-001",
+#   "customer_ID": "2006a742-1e22-4b36-8417-313567d4a1c8",
+#   "orderDate": "2026-06-02",
+#   "netAmount": 1271.19,
+#   "status": "New"
+# }
+
+
+
+# POST {{base}}/Orders(74a69d4f-cacb-4e1b-9945-7abf9111e8e1)/OrderService.confirm
+# Content-Type: application/json
+
+# {}
+
+# POST {{base}}/Orders(74a69d4f-cacb-4e1b-9945-7abf9111e8e1)/OrderService.confirm
+# Content-Type: application/json
+
+# {}
+
+# POST {{base}}/Orders(74a69d4f-cacb-4e1b-9945-7abf9111e8e1)/OrderService.ship
+# Content-Type: application/json
+
+# {
+#   "trackingNumber": "TRK-2026-001",
+#   "carrier": "BlueDart"
+# }
+
+# POST {{base}}/Orders(74a69d4f-cacb-4e1b-9945-7abf9111e8e1)/OrderService.deliver
+# Content-Type: application/json
+
+// {}
+
+# POST {{base}}/Orders(74a69d4f-cacb-4e1b-9945-7abf9111e8e1)/OrderService.cancel
+# Content-Type: application/json
+
+# {
+#   "reason": "Changed my mind"
+# }
+
+//GET {{base}}/Orders(74a69d4f-cacb-4e1b-9945-7abf9111e8e1)/OrderService.getTotal()
+
+//GET {{base}}/getOrderStats(year=2026,month=6)
+
+//GET {{base}}/Orders(74a69d4f-cacb-4e1b-9945-7abf9111e8e1)
+
+# POST {{base}}/bulkConfirm
+# Content-Type: application/json
+
+# {
+#   "orderIds": ["74a69d4f-cacb-4e1b-9945-7abf9111e8e1", "order-uuid-2", "order-uuid-3"]
+# }
+
+
+
