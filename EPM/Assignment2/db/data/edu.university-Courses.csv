@@ -1,7 +1,0 @@
-code,title,description,credits,maxStudents,currentEnrolled,semester,departmentCode,professorId,schedule,roomNumber,isActive
-CS101,Introduction to Programming,Learn basics of C and Python,4,60,3,1,CS,c1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,MWF 10:00-11:00,R-101,true
-CS202,Data Structures,Arrays, Linked Lists, and Trees,4,50,2,3,CS,f4b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,TTS 11:30-12:30,R-103,true
-EC101,Basic Electronics,Semiconductors and circuit theories,3,60,2,1,EC,d2b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,MWF 09:00-10:00,J-110,true
-EC302,Digital Signal Processing,Signals and systems operations,4,45,1,5,EC,a5b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,TTS 02:00-03:30,J-302,true
-ME101,Engineering Mechanics,Forces and structural mechanics,3,70,0,1,ME,e3b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,MWF 02:00-03:00,V-101,true
-CS401,Artificial Intelligence,Introduction to Machine Learning,4,40,4,7,CS,c1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,TTS 09:00-10:30,R-401,true

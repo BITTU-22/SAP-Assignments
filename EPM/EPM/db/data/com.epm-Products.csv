@@ -1,9 +1,0 @@
-ID,name,description,price,currency_code,stock,minStock,rating,supplier_ID,category_ID
-p301,ProBook X3,High-performance business laptop,1200.00,USD,15,5,4.5,s104,c203
-p302,Z-Phone 15,Latest flagship smartphone,999.00,USD,3,10,4.8,s101,c202
-p303,Wireless Mouse,Ergonomic optical mouse,25.00,USD,50,20,4.2,s101,c201
-p304,Organic Earl Grey,Premium black tea box,6.50,EUR,100,25,4.7,s102,c205
-p305,Sparkling Water,Refreshing carbonated water,1.20,EUR,8,15,3.9,s102,c205
-p306,Super Tablet 11,11-inch entertainment tablet,450.00,USD,4,5,4.0,s103,c201
-p307,USB-C Hub,6-in-1 multi-port adapter,45.00,USD,30,15,4.4,s101,c201
-p308,Mechanical Keyboard,RGB backlit tactile keyboard,85.00,USD,12,10,4.6,s104,c201

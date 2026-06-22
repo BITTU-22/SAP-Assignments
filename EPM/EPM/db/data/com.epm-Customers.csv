@@ -1,5 +1,0 @@
-ID,name,email,phone,city,country_code,creditLimit
-cust401,Acme Corp,purchasing@acme.com,+15559876,Chicago,US,50000.00
-cust402,Tech Start Oy,info@techstart.fi,+35891234,Helsinki,FI,15000.00
-cust403,Global Retailers,contact@globalretail.com,+44207111,Manchester,GB,100000.00
-cust404,Individual Buyer,buyer@personal.me,+15554321,Austin,US,2000.00

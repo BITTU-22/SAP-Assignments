@@ -1,7 +1,0 @@
-ID,order_ID,product_ID,quantity,unitPrice,netAmount
-soi601,so501,p301,2,1200.00,2400.00
-soi602,so501,p303,1,25.00,25.00
-soi603,so502,p302,1,999.00,999.00
-soi604,so503,p304,2,6.50,13.00
-soi605,so503,p305,1,1.20,1.20
-soi606,so504,p306,1,450.00,450.00

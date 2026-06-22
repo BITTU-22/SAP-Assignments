@@ -1,7 +1,0 @@
-ID,firstName,lastName,specialization,qualification,experience,fee,department_ID,phone,email,availableDays,isActive
-d202d202-e1e2-0000-0000-000000000001,Arvind,Sharma,Cardiology,MD - Cardiology,15,250.00,c101c101-e1e2-0000-0000-000000000001,9876543210,arvind.sharma@medicare.in,"Mon,Wed,Fri",true
-d202d202-e1e2-0000-0000-000000000002,Rajesh,Iyer,Neurology,MD - Neurology,12,300.00,c101c101-e1e2-0000-0000-000000000002,9812345678,rajesh.iyer@medicare.in,"Tue,Thu",true
-d202d202-e1e2-0000-0000-000000000003,Meera,Nair,Pediatrics,MD - Pediatrics,8,150.00,c101c101-e1e2-0000-0000-000000000003,9701234567,meera.nair@medicare.in,"Mon,Tue,Thu",true
-d202d202-e1e2-0000-0000-000000000004,Sanjay,Patel,Orthopedics,MS - Orthopedics,10,200.00,c101c101-e1e2-0000-0000-000000000004,9654321098,sanjay.patel@medicare.in,"Wed,Fri",true
-d202d202-e1e2-0000-0000-000000000005,Ananya,Reddy,Cardiology,MD - Cardiology,6,220.00,c101c101-e1e2-0000-0000-000000000001,9500112233,ananya.reddy@medicare.in,"Tue,Fri",true
-d202d202-e1e2-0000-0000-000000000006,Amit,Verma,Neurology,MD - Neurology,18,350.00,c101c101-e1e2-0000-0000-000000000002,9444556677,amit.verma@medicare.in,"Mon,Wed",true
