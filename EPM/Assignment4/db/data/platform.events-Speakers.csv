@@ -1,0 +1,6 @@
+ID;name;email;phone;bio;company;designation;expertise;photoUrl;rating;totalTalks;isActive
+c1111111-1111-1111-1111-111111111111;Rajesh Kumar;rajesh.k@tcs.com;9123456780;Cloud Architect with 15 yrs exp;TCS;Principal Architect;Cloud Computing;https://example.com/rajesh.jpg;4.8;25;true
+c2222222-2222-2222-2222-222222222222;Meera Reddy;meera.r@infosys.com;9123456781;AI/ML specialist;Infosys;Lead Data Scientist;Machine Learning;https://example.com/meera.jpg;4.9;12;true
+c3333333-3333-3333-3333-333333333333;Vikram Singh;vikram.s@wipro.com;9123456782;Cybersecurity expert;Wipro;CISO;Security;https://example.com/vikram.jpg;4.7;30;true
+c4444444-4444-4444-4444-444444444444;Ananya Desai;ananya.d@techm.com;9123456783;Blockchain developer;Tech Mahindra;Senior Developer;Blockchain;https://example.com/ananya.jpg;4.5;8;true
+c5555555-5555-5555-5555-555555555555;Suresh Rao;suresh.r@hcl.com;9123456784;Agile coach and mentor;HCL;Agile Coach;Agile,Scrum;https://example.com/suresh.jpg;4.6;45;true

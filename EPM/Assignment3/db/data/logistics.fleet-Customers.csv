@@ -1,0 +1,5 @@
+ID;name;company;phone;email;address;city;pincode;gstNumber;tier
+30303030-3030-3030-3030-303030303031;Ravi Kumar;TechCorp India;9876543210;ravi@techcorp.in;Hitech City Phase 2;Hyderabad;500081;GSTIN12345ABC;Enterprise
+30303030-3030-3030-3030-303030303032;Priya Sharma;BakeHouse;9876543211;priya@bakehouse.com;Koramangala 4th Block;Bangalore;560034;GSTIN67890DEF;Premium
+30303030-3030-3030-3030-303030303033;Amit Patel;Patel Exports;9876543212;amit@patelexports.com;Andheri East;Mumbai;400069;GSTIN11223GHI;Regular
+30303030-3030-3030-3030-303030303034;Neha Gupta;Gupta Traders;9876543213;neha@guptatraders.in;Connaught Place;Delhi;110001;GSTIN44556JKL;Premium
