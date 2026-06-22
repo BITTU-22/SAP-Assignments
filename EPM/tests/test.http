@@ -1,0 +1,122 @@
+### 1. Admin Service: Fetch All Products
+//GET http://localhost:4004/odata/v4/admin/Products
+
+### 2. Admin Service: Expand Product to Supplier & Category
+//GET http://localhost:4004/odata/v4/admin/Products?$expand=supplier,category
+
+### 3. Admin Service: Deep Composition Expand (SalesOrders -> Items -> Products)
+//GET http://localhost:4004/odata/v4/admin/SalesOrders?$expand=items($expand=product),customer
+
+//GET http://localhost:4004/odata/v4/admin/Products?$filter=price gt 100
+
+//GET http://localhost:4004/odata/v4/admin/Products?$filter=price gt 500 and stock lt 20
+
+//GET http://localhost:4004/odata/v4/admin/SalesOrders?$filter=createdAt ge 2026-01-01
+
+//GET http://localhost:4004/odata/v4/admin/Customers?$filter=email eq null
+
+//GET http://localhost:4004/odata/v4/admin/Products?$filter=price ge 100 and price le 500
+
+//GET http://localhost:4004/odata/v4/admin/Products?$filter=rating le 5 or rating ge 4
+
+//Supplier from germany:
+//GET http://localhost:4004/odata/v4/admin/Suppliers?$filter=country eq 'Germany'&$expand=products
+
+//Top 5 hiihgest orders of this month:
+//GET http://localhost:4004/odata/v4/admin/SalesOrders?$filter=createdAt ge 2026-06-01&$orderby=netAmount desc&$top=5
+
+//Products in electronics category sorted by price:
+//GET http://localhost:4004/odata/v4/admin/Products?$filter=category eq 'Electronics'&$orderby=price asc
+
+//Page 2 of customers (15 per page) sorted by name:
+//GET http://localhost:4004/odata/v4/admin/Customers?$orderby=name asc&$skip=15&$top=15
+
+//Orders with status 'New' and amount over $1000, with customer name
+//GET http://localhost:4004/odata/v4/admin/SalesOrders?$filter=status eq 'New' and netAmount gt 1000&$expand=customer($select=name)
+
+//@sales = http://localhost:4004/odata/v4/admin
+### Test 1: Create order without customer (should fail)
+# POST {{sales}}/SalesOrders
+# Content-Type: application/json
+
+# {
+#   "orderDate": "2026-06-15",
+#   "items": [
+#     { "product_ID": "p1000001-...", "quantity": 2, "unitPrice": 50.00 }
+#   ]
+# }
+
+# POST {{sales}}/SalesOrders
+# Content-Type: application/json
+
+# {
+#   "customer_ID": "c1000001-...",
+#   "orderDate": "2020-01-01",
+#   "items": [
+#     { "product_ID": "p1000001-...", "quantity": 2, "unitPrice": 50.00 }
+#   ]
+# }
+
+# POST {{sales}}/SalesOrders
+# Content-Type: application/json
+
+# {
+#   "customer_ID": "c1000001-...",
+#   "orderDate": "2026-06-15",
+#   "items": [
+#     { "product_ID": "p1000001-...", "quantity": 0, "unitPrice": 50.00 }
+#   ]
+# }
+
+
+
+### Test 4: Create valid order (should succeed + auto-calculate totals!)
+# POST {{sales}}/SalesOrders
+# Content-Type: application/json
+
+# {
+#   "customer_ID": "cust401",
+#   "orderNumber": "SO-201",
+#   "orderDate": "2026-06-15",
+#   "currency_code": "USD",
+#   "items": [
+#   { "product_ID": "p1000001-a1b2-c3d4-e5f6-7890abcdef12", "quantity": 2, "unitPrice": 499.99 },
+#   { "product_ID": "p1000002-a1b2-c3d4-e5f6-7890abcdef12", "quantity": 1, "unitPrice": 29.99 }
+# ]
+# }
+
+### Test 5: Try invalid status transition (New → Delivered should fail)
+# PATCH {{sales}}/SalesOrders(f0164824-08b8-452f-84f9-8343e70206ce)
+# Content-Type: application/json
+
+# {
+#   "status": "Delivered"
+# }
+
+
+### Test 6: Valid status transition (New → Confirmed)
+# PATCH {{sales}}/SalesOrders(f0164824-08b8-452f-84f9-8343e70206ce)
+# Content-Type: application/json
+
+# {
+#   "status": "Confirmed"
+# }
+
+
+# POST http://localhost:4004/analytics/GenerateReport
+# Content-Type: application/json
+
+# {
+#   "reportType": "Sales",
+#   "startDate": "2026-01-01",
+#   "endDate": "2026-05-31"
+# }
+
+# POST http://localhost:4004/sales/SalesOrders('so501')/confirm
+# Content-Type: application/json
+
+# {
+
+# }
+
+//GET http://localhost:4004/sales/SalesOrders

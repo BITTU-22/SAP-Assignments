@@ -1,0 +1,79 @@
+{
+  "xsappname": "EPM",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Read",
+      "description": "Read EPM data"
+    },
+    {
+      "name": "$XSAPPNAME.Create",
+      "description": "Create and edit EPM records"
+    },
+    {
+      "name": "$XSAPPNAME.Approve",
+      "description": "Approve or reject EPM transactions"
+    },
+    {
+      "name": "$XSAPPNAME.Delete",
+      "description": "Delete EPM records"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Full administrative access to EPM"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "Read-only access to EPM data",
+      "scope-references": [
+        "$XSAPPNAME.Read"
+      ]
+    },
+    {
+      "name": "Manager",
+      "description": "Create and approve EPM transactions",
+      "scope-references": [
+        "$XSAPPNAME.Read",
+        "$XSAPPNAME.Create",
+        "$XSAPPNAME.Approve"
+      ]
+    },
+    {
+      "name": "Administrator",
+      "description": "Full access including delete and admin",
+      "scope-references": [
+        "$XSAPPNAME.Read",
+        "$XSAPPNAME.Create",
+        "$XSAPPNAME.Approve",
+        "$XSAPPNAME.Delete",
+        "$XSAPPNAME.Admin"
+      ]
+    }
+  ],
+  "role-collections": [
+    {
+      "name": "EPM_ViewerRC",
+      "description": "Role collection for EPM viewers",
+      "role-template-references": [
+        "$XSAPPNAME.Viewer"
+      ]
+    },
+    {
+      "name": "EPM_ManagerRC",
+      "description": "Role collection for EPM managers",
+      "role-template-references": [
+        "$XSAPPNAME.Manager"
+      ]
+    },
+    {
+      "name": "EPM_AdminRC",
+      "description": "Role collection for EPM administrators",
+      "role-template-references": [
+        "$XSAPPNAME.Administrator"
+      ]
+    }
+  ]
+}
