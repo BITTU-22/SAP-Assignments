@@ -1,0 +1,57 @@
+# # # # http://localhost:4004/odata/v4/catalog/Books
+# # # http://localhost:4004/odata/v4/catalog/Books?$filter=price gt 400
+//GET http://localhost:4004/odata/v4/catalog/Books
+# # POST http://localhost:4004/odata/v4/catalog/Books
+# # Content-Type: application/json
+
+# # {
+# #   "ID": 6,
+# #   "title": "Learning SAP CAP",
+# #   "author": "SAP Team",
+# #   "price": 800,
+# #   "stock": 100,
+# #   "category": "Programming"
+# # }
+# # PATCH http://localhost:4004/odata/v4/catalog/Books(1)
+# # Content-Type: application/json
+
+# # {
+# #   "price": 499,
+# #   "stock": 25
+# # }
+//DELETE http://localhost:4004/odata/v4/catalog/Books(6)
+//GET http://localhost:4004/odata/v4/catalog/Authors
+
+
+
+//POST http://localhost:4004/odata/v4/catalog/Reviews
+
+# POST http://localhost:4004/odata/v4/catalog/Reviews
+# Content-Type: application/json
+
+# {
+#   "ID": 1,
+#   "bookId": 1,
+#   "reviewer": "Priya",
+#   "rating": 5,
+#   "comment": "Excellent book on clean coding practices!"
+# }
+
+//GET http://localhost:4004/reports/AvailableBooks
+
+//GET http://localhost:4004/reports/OverdueBorrowings
+
+//GET http://localhost:4004/reports/BookPricing
+
+//GET http://localhost:4004/reports/BookPricing?$filter=priceCategory eq 'Premium'
+
+//GET http://localhost:4004/reports/MemberActivity?$filter=isActive eq true
+
+POST /admin/Books
+Content-Type: application/json
+
+{
+
+
+  
+}

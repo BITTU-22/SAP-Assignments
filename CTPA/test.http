@@ -1,0 +1,22 @@
+//GET http://localhost:4000/books
+//GET http://localhost:4000/books/1
+# POST http://localhost:4000/books
+# Content-Type: application/json
+
+# {
+#   "title": "The Great Gatsby",
+#   "author": "F. Scott Fitzgerald",
+#   "year": 1925
+# }
+# PUT http://localhost:4000/books/1
+# Content-Type: application/json
+
+# {
+#   "title": "The Great Gatsby (Updated)",
+#   "author": "F. Scott Fitzgerald",
+#   "year": 1925
+# }
+//DELETE http://localhost:4000/books/4
+
+//GET http://localhost:4000/books?sort=price
+GET http://localhost:4000/books?minprice=500

@@ -1,0 +1,148 @@
+//@base = http://localhost:4004/admin
+
+//CREATE OPERATIONS (POST):
+//================================
+
+
+# POST {{base}}/Authors
+# Content-Type: application/json
+
+# {
+#   "name": "Dan Brown",
+#   "country": "United States",
+#   "email": "dan.brown@example.com"
+# }
+
+# POST {{base}}/Books
+# Content-Type: application/json
+
+# {
+#   "title": "The Da Vinci Code",
+#   "genre": "Thriller",
+#   "price": 14.99,
+#   "stock": 85,
+#   "rating": 4.1,
+#   "isbn": "9780307474278",
+#   "author_ID": "42e467d4-8864-48cf-95de-0f454ee7cade"
+# }
+
+
+# POST {{base}}/Books
+# Content-Type: application/json
+
+# {
+#   "title": "Angels & Demons",
+#   "genre": "Thriller",
+#   "price": 12.99,
+#   "stock": 60,
+#   "rating": 4.0,
+#   "isbn": "9780743493468",
+#   "author_ID": "42e467d4-8864-48cf-95de-0f454ee7cade"
+# }
+
+# POST {{base}}/Books
+# Content-Type: application/json
+
+# {
+#   "price": 9.99
+# }
+
+# POST {{base}}/Books
+# Content-Type: application/json
+
+# {
+#   "title": "Bad Data Book",
+#   "price": "not-a-number"
+# }
+
+
+##READ OPERATIONS (GET):
+//================================
+
+//GET {{base}}/Authors
+//GET {{base}}/Books
+
+//GET {{base}}/Books(b1000001-0000-0000-0000-000000000001)
+
+//GET {{base}}/Books(00000000-0000-0000-0000-000000000000)
+
+//GET {{base}}/Books(b1000001-0000-0000-0000-000000000001)/author
+
+//GET {{base}}/Authors(a1000001-0000-0000-0000-000000000003)/books
+
+//GET {{base}}/Books?$expand=author&$select=title,price
+
+##UPDATE OPERATIONS (PATCH and PUT):
+//================================
+
+# PATCH {{base}}/Books(b1000001-0000-0000-0000-000000000001)
+# Content-Type: application/json
+
+# {
+#   "price": 16.99
+# }
+
+# PATCH {{base}}/Books(b1000001-0000-0000-0000-000000000001)
+# Content-Type: application/json
+
+# {
+#   "stock": 120,
+#   "rating": 4.3
+# }
+
+//GET {{base}}/Books(b1000001-0000-0000-0000-000000000001)
+
+# PUT {{base}}/Books(b1000001-0000-0000-0000-000000000001)
+# Content-Type: application/json
+
+# {
+#   "title": "The Da Vinci Code - Special Edition",
+#   "genre": "Thriller",
+#   "price": 19.99,
+#   "stock": 200,
+#   "rating": 4.5,
+#   "isbn": "9780307474278",
+#   "author_ID": "a1000001-0000-0000-0000-000000000001"
+# }
+
+//GET {{base}}/Books(b1000001-0000-0000-0000-000000000001)
+
+# PATCH {{base}}/Books(00000000-0000-0000-0000-000000000000)
+# Content-Type: application/json
+
+# {
+#   "price": 99.99
+# }
+
+//DELETE OPERATIONS (DELETE):
+//================================
+
+//DELETE {{base}}/Books(b1000001-0000-0000-0000-000000000001)
+
+//GET {{base}}/Books(b1000001-0000-0000-0000-000000000001)
+
+//DELETE {{base}}/Books(b1000001-0000-0000-0000-000000000001)
+
+//DELETE http://localhost:4004/catalog/Books(b1000001-0000-0000-0000-000000000001)
+
+//READ ONLY(CRUD):
+@catalog = http://localhost:4004/catalog
+
+//GET {{catalog}}/Books
+
+# POST {{catalog}}/Books
+# Content-Type: application/json
+
+# {
+#   "title": "Test",
+#   "price": 1.00
+# }
+
+# PATCH {{catalog}}/Books(b1000001-0000-0000-0000-000000000001)
+# Content-Type: application/json
+
+# {
+#   "price": 999.99
+# }
+
+//DELETE {{catalog}}/Books(b1000001-0000-0000-0000-000000000001)

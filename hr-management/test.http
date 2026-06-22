@@ -1,0 +1,1 @@
+GET http://localhost:4004/odata/v4/hr/Employees?$filter=month(hireDate) eq 6

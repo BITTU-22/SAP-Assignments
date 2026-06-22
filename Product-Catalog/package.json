@@ -1,5 +1,5 @@
 {
-  "name": "mini",
+  "name": "Product-Catalog",
   "version": "1.0.0",
   "dependencies": {
     "@sap/cds": "^9"
@@ -10,13 +10,13 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-project1": "cds watch --open project1/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-project2": "cds watch --open project2/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "cds": {
     "requires": {
       "db": {
         "kind": "sqlite",
-        "model": "db/po-schema.cds"
+        "model": "db/schema.cds"
       }
     }
   },
@@ -25,6 +25,10 @@
     "app/*"
   ],
   "sapux": [
-    "app/project1"
+    "app/project2",
+    "app/catalog"
   ]
+ 
+
+
 }

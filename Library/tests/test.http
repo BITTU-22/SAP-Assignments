@@ -1,0 +1,142 @@
+//GET http://localhost:4004/catalog
+
+//GET http://localhost:4004/catalog/Books
+
+//GET http://localhost:4004/catalog/Books(b1000001-0000-0000-0000-000000000001)
+
+//GET http://localhost:4004/catalog/Authors
+
+//GET http://localhost:4004/catalog/Books?$expand=author
+
+//GET http://localhost:4004/catalog/Authors?$expand=books
+
+//GET http://localhost:4004/catalog/Books?$filter=genre eq 'Fantasy'
+
+//GET http://localhost:4004/catalog/Books?$orderby=price desc
+
+//GET http://localhost:4004/catalog/Books?$top=3
+
+//GET http://localhost:4004/catalog/$metadata
+
+//GET http://localhost:4004/catalog/Authors?$select=name,email
+
+# POST http://localhost:4004/catalog/Books
+# Content-Type: application/json
+
+# {
+#   "title": "New Book",
+#   "price": 15.99
+# }
+
+# POST http://localhost:4004/admin/Authors
+# Content-Type: application/json
+
+# {
+#   "name": "Dan Brown",
+#   "country": "United States",
+#   "email": "dan@example.com"
+# }
+
+# POST http://localhost:4004/admin/Books
+# Content-Type: application/json
+
+# {
+#   "title": "The Da Vinci Code",
+#   "genre": "Thriller",
+#   "price": 14.99,
+#   "stock": 100,
+#   "rating": 4.2,
+#   "isbn": "9780307474278",
+#   "author_ID": "<paste-the-new-author-ID-here>"
+#}
+
+
+//GET http://localhost:4004/catalog/Books?$select=title,author_ID
+
+//GET http://localhost:4004/catalog/Books?$select=title&$expand=author($select=name)
+
+//cheapest books
+//GET http://localhost:4004/catalog/Books?$orderby=price
+
+//most expensive books
+//GET http://localhost:4004/catalog/Books?$orderby=price desc
+
+//highest rated books
+//GET http://localhost:4004/catalog/Books?$orderby=rating desc
+
+//alphabetical order
+//GET http://localhost:4004/catalog/Books?$orderby=title
+
+//sort genre
+//GET http://localhost:4004/catalog/Books?$orderby=genre,title
+
+//GET http://localhost:4004/catalog/Books?$top=3
+
+//GET http://localhost:4004/catalog/Books?$orderby=price&$top=5
+
+//GET http://localhost:4004/catalog/Books?$top=10&$skip=0
+
+//GET http://localhost:4004/catalog/Books?$top=10&$skip=10
+
+//GET http://localhost:4004/catalog/Books?$top=4&$skip=2
+
+//GET http://localhost:4004/catalog/Books?$orderby=price desc&$top=3
+
+//GET http://localhost:4004/catalog/Books?$orderby=title&$top=2&$skip=5
+# POST http://localhost:4004/admin/Books
+# Content-Type: application/json
+
+# {
+
+
+# }
+
+//GET http://localhost:4004/catalog/Books
+
+//GET http://localhost:4004/catalog/Books(b1000001-0000-0000-0000-000000000001)
+
+//GET http://localhost:4004/catalog/Books?$filter=genre eq 'Fantasy'&$expand=author
+
+//GET http://localhost:4004/catalog/Books(b1000001-0000-0000-0000-000000000001)/author
+
+
+//@baseUrl = http://localhost:4004/admin
+//GET {{baseUrl}}/Books
+//Content-Type: application/json
+
+# POST {{baseUrl}}/Books
+# Content-Type: application/json
+
+# {
+#     "title": "The Way of Kings",
+#     "price": 29.99,
+#     "stock": 15,
+#     "isbn": "9780765326355",
+#     "genre": "Fantasy"
+# }
+
+//without title
+# POST {{baseUrl}}/Books
+# Content-Type: application/json
+
+# {
+#     "price": 19.99,
+#     "stock": 10,
+#     "isbn": "1234567890123",
+#     "genre": "Fiction"
+# }
+
+//price > 9999.99
+# POST {{baseUrl}}/Books
+# Content-Type: application/json
+
+# {
+#     "title": "Overpriced Book",
+#     "price": 10500.00,
+#     "stock": 5,
+#     "isbn": "1234567890123",
+#     "genre": "Mystery"
+# }
+
+//delete book by ID:
+//DELETE http://localhost:4004/admin/Books(bd153551-9b75-4e5e-b339-cd407c1d3301)

@@ -1,0 +1,25 @@
+{
+  "name": "CAP1",
+  "version": "1.0.0",
+  "dependencies": {
+    "@sap/cds": "^9",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2.4"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "./db/CAP1.db"
+        }
+      }
+    }
+  },
+  "private": true
+}
