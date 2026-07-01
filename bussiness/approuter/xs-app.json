@@ -1,0 +1,12 @@
+{
+  "welcomeFile": "/odata/v4/business-partner/BusinessPartners",
+  "authenticationMethod": "route",
+  "routes": [
+    {
+      "source": "^/odata/(.*)$",
+      "target": "/odata/$1",
+      "destination": "srv-api",
+      "authenticationType": "xsuaa"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+_schema-version: 3.3.0
+ID: bussiness
+version: 1.0.0
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm ci
+        - npx cds build --production
+modules:
+  - name: bussiness-srv
+    type: nodejs
+    path: gen/srv
+    parameters:
+      instances: 1
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: npm-ci
+    provides:
+      - name: srv-api # required by consumers of CAP services (e.g. approuter)
+        properties:
+          srv-url: ${default-url}
+    requires:
+      - name: bussiness-destination
+      - name: bussiness-auth
+  - name: bussiness-approuter
+    type: approuter.nodejs
+    path: approuter
+    parameters:
+      keep-existing-routes: true
+      memory: 256M
+      disk-quota: 256M
+    requires:
+      - name: bussiness-auth
+      - name: srv-api
+        group: destinations
+        properties:
+          name: srv-api
+          url: ~{srv-url}
+          forwardAuthToken: true
+resources:
+  - name: bussiness-destination
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: destination
+      service-plan: lite
+  - name: bussiness-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: bussiness-${org}-${space}
+        tenant-mode: dedicated
+        oauth2-configuration:
+          credential-types:
+            - "binding-secret"
+            - "x509"
+        role-collections:
+          - name: 'Viewer (bussiness ${org}-${space})'
+            description: 'generated'
+            role-template-references:
+              - '$XSAPPNAME.Viewer'

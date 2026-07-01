@@ -1,0 +1,71 @@
+{
+  "name": "incident-management",
+  "version": "1.0.0",
+  "dependencies": {
+    "@cap-js/hana": "^2",
+    "@sap-cloud-sdk/connectivity": "^3.26.4",
+    "@sap-cloud-sdk/http-client": "^3.26.4",
+    "@sap-cloud-sdk/resilience": "^3.26.4",
+    "@sap-cloud-sdk/util": "^3.26.4",
+    "@sap/cds": "^9",
+    "@sap/xssec": "^4",
+    "@ui5/cli": "4.0.57"
+  },
+  "devDependencies": {
+    "@cap-js/cds-test": "^1.0.1",
+    "@cap-js/sqlite": "^2.4",
+    "@sap/cds-dk": "^9",
+    "axios": "^1.18.1",
+    "cds-plugin-ui5": "^0.9.1",
+    "jest": "^30.4.2"
+  },
+  "scripts": {
+    "test": "npx jest tests/test.js",
+    "start": "cds-serve",
+    "watch-incidents": "cds watch --open ns.incidents/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "alice": {
+              "roles": [
+                "support"
+              ]
+            },
+            "bob": {
+              "roles": [
+                "support"
+              ]
+            }
+          }
+        }
+      },
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      },
+      "destinations": true,
+      "html5-repo": true,
+      "workzone": true,
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER",
+        "[production]": {
+          "credentials": {
+            "destination": "S4HANA"
+          }
+        }
+      }
+    }
+  },
+  "private": true,
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/incidents"
+  ]
+}

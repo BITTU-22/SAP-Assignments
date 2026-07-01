@@ -1,4 +1,0 @@
-ID,productName,description,price,currency_code,stock,minStock,rating,status,sku,weight,category_ID
-69ec7373-ba92-4914-9bf0-6fa2d2a41285,Wireless Mouse,Ergonomic 2.4G mouse,29.99,USD,15,10,4.5,Active,PRD-00001,0.15,4f1a4de1-96cd-4d89-9b98-ea48690b22f2
-7a7a7a7a-7a7a-7a7a-7a7a-7a7a-7a7a-7a7a,Old Keyboard,Vintage mechanical keyboard,49.99,USD,0,5,3.0,Discontinued,PRD-00002,0.80,4f1a4de1-96cd-4d89-9b98-ea48690b22f2
-8b8b8b8b-8b8b-8b8b-8b8b-8b8b-8b8b-8b8b,Low Stock Headphones,Studio reference headphones,150.00,USD,2,10,4.8,Draft,PRD-00003,0.30,4f1a4de1-96cd-4d89-9b98-ea48690b22f2

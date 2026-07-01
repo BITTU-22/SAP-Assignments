@@ -1,5 +1,0 @@
-ID;title;description;eventType;venueId;startDate;endDate;startTime;endTime;maxAttendees;registeredCount;ticketPrice;status;organizerName;organizerEmail;tags
-b1111111-1111-1111-1111-111111111111;Deccan Tech Summit;Annual tech conference;Conference;a1111111-1111-1111-1111-111111111111;2026-06-10;2026-06-12;09:00:00;18:00:00;1000;2;1999.00;Published;TechIndia Org;info@techindia.in;Tech,Innovation
-b2222222-2222-2222-2222-222222222222;Mumbai AI Workshop;Hands-on AI training;Workshop;a2222222-2222-2222-2222-222222222222;2026-07-15;2026-07-15;10:00:00;17:00:00;50;2;4999.00;Published;AI Labs;contact@ailabs.in;AI,ML,Workshop
-b3333333-3333-3333-3333-333333333333;Fintech Seminar Bengaluru;Future of Finance;Seminar;a3333333-3333-3333-3333-333333333333;2026-08-01;2026-08-01;09:30:00;13:30:00;500;3;999.00;Published;FinTech India;events@fintechindia.in;Finance,Tech
-b4444444-4444-4444-4444-444444444444;Hyderabad Cloud Meetup;Monthly cloud community meetup;Meetup;a1111111-1111-1111-1111-111111111111;2026-09-05;2026-09-05;16:00:00;19:00:00;200;3;0.00;Published;Cloud Natives;hello@cloudnatives.in;Cloud,AWS,Azure

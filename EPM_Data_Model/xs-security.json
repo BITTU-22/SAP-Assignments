@@ -1,0 +1,98 @@
+{
+  "xsappname": "epm-complete-${org}-${space}",
+  "tenant-mode": "dedicated",
+
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Read",
+      "description": "Read PO data"
+    },
+    {
+      "name": "$XSAPPNAME.Create",
+      "description": "Create and edit Purchase Orders"
+    },
+    {
+      "name": "$XSAPPNAME.Approve",
+      "description": "Approve or reject Purchase Orders"
+    },
+    {
+      "name": "$XSAPPNAME.Delete",
+      "description": "Delete Purchase Orders"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Full administrative access"
+    },
+    {
+      "name": "$XSAPPNAME.Viewer",
+      "description": "Viewer role"
+    },
+    {
+      "name": "$XSAPPNAME.PurchaseManager",
+      "description": "Purchase Manager role"
+    },
+    {
+      "name": "$XSAPPNAME.Administrator",
+      "description": "Administrator role"
+    }
+  ],
+
+  "attributes": [],
+
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "Read-only access to Purchase Orders",
+      "scope-references": [
+        "$XSAPPNAME.Read",
+        "$XSAPPNAME.Viewer"
+      ]
+    },
+    {
+      "name": "PurchaseManager",
+      "description": "Create, edit and submit Purchase Orders",
+      "scope-references": [
+        "$XSAPPNAME.Read",
+        "$XSAPPNAME.Create",
+        "$XSAPPNAME.Approve",
+        "$XSAPPNAME.PurchaseManager"
+      ]
+    },
+    {
+      "name": "Administrator",
+      "description": "Full administrative access",
+      "scope-references": [
+        "$XSAPPNAME.Read",
+        "$XSAPPNAME.Create",
+        "$XSAPPNAME.Approve",
+        "$XSAPPNAME.Delete",
+        "$XSAPPNAME.Admin",
+        "$XSAPPNAME.Administrator"
+      ]
+    }
+  ],
+
+  "role-collections": [
+    {
+      "name": "PO_Viewer",
+      "description": "Role collection for Viewers",
+      "role-template-references": [
+        "$XSAPPNAME.Viewer"
+      ]
+    },
+    {
+      "name": "PO_Manager",
+      "description": "Role collection for Purchase Managers",
+      "role-template-references": [
+        "$XSAPPNAME.PurchaseManager"
+      ]
+    },
+    {
+      "name": "PO_Admin",
+      "description": "Role collection for Administrators",
+      "role-template-references": [
+        "$XSAPPNAME.Administrator"
+      ]
+    }
+  ]
+}

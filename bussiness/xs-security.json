@@ -1,0 +1,31 @@
+{
+  "xsappname": "$XSAPPNAME",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.Viewer",
+      "description": "View Business Partners"
+    },
+    {
+      "name": "$XSAPPNAME.Administrator",
+      "description": "Administrator"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "Business Partner Viewer",
+      "scope-references": [
+        "$XSAPPNAME.Viewer"
+      ]
+    },
+    {
+      "name": "Administrator",
+      "description": "Business Partner Administrator",
+      "scope-references": [
+        "$XSAPPNAME.Administrator"
+      ]
+    }
+  ]
+}

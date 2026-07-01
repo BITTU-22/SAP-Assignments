@@ -1,0 +1,13 @@
+### Trigger Leave Process
+POST http://localhost:4004/odata/v4/workflow/triggerLeaveProcess
+Content-Type: application/json
+
+{
+    "definitionId": "us10.b38cf66dtrial.leaveprocess.holidayProcess",
+    "context": {
+        "employeeID": "38465",
+        "employeeName": "vishnu",
+        "leaveDate": "2023-10-01",
+        "leaveType": "Casual Leave"
+    }
+}
